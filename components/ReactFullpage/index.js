@@ -63,6 +63,8 @@ class ReactFullpage extends React.Component {
       ...listeners,
     };
 
+    console.log(finalOpts)
+
     if (v2compatible) {
       if (!$ || $ instanceof window.jQuery === false) {
         throw new Error('Must provide $ (jQuery) as a prop if using v2 API');
