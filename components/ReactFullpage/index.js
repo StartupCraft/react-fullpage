@@ -63,8 +63,6 @@ class ReactFullpage extends React.Component {
       ...listeners,
     };
 
-    console.log(finalOpts)
-
     if (v2compatible) {
       if (!$ || $ instanceof window.jQuery === false) {
         throw new Error('Must provide $ (jQuery) as a prop if using v2 API');
@@ -83,7 +81,7 @@ class ReactFullpage extends React.Component {
   componentWillUnmount() {
     // NOTE: need to check for init to support SSR
     if (!this.state.initialized) return;
-     this.fullpageApi.destroy('all');
+     this.fullpageApi.destroy();
   }
 
   markInitialized() {
