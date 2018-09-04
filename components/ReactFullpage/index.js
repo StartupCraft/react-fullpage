@@ -81,7 +81,7 @@ class ReactFullpage extends React.Component {
   componentWillUnmount() {
     // NOTE: need to check for init to support SSR
     if (!this.state.initialized) return;
-     this.fullpageApi.destroy();
+    this.fullpageApi.destroy('all');
   }
 
   markInitialized() {
